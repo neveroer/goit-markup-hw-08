@@ -1,0 +1,79 @@
+%container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 94px;
+  padding-top: 94px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* убирает маркеры списка, дает 0 марджин и паддинг */
+%markers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* убирает подчеркивание ссылок, делает их блоками, задает параметры текста */
+%link {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  display: block;
+}
+/* прячет элементы, которые имеют имеют значение для семантики, но отсутствуют на макете*/
+%visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+%focus {
+  outline: none;
+}
+
+%button {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $third-text-color;
+  background-color: $accent-color;
+
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  transition: color $duration $timing, border-color $duration $timing,
+    background-color $duration $timing;
+
+  &:hover,
+  &:focus {
+    @extend %focus;
+    color: $accent-color;
+    background-color: $third-text-color;
+    border-color: $accent-color;
+  }
+}
+
+%links-list {
+  @extend %markers;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+%links-item {
+  display: block;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}

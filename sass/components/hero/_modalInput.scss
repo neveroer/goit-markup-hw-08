@@ -1,0 +1,114 @@
+.modal-input {
+  position: relative;
+
+  display: block;
+  margin-bottom: 30px;
+}
+
+.input-field {
+  padding-left: 42px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color $timing $duration;
+
+  .modal-input:focus-within > & {
+    outline: none;
+    border-color: $accent-color;
+  }
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  transition: fill $timing $duration;
+
+  .modal-input:focus-within > & {
+    fill: $accent-color;
+  }
+}
+
+.textarea {
+  margin-bottom: 30px;
+  padding-left: 16px;
+
+  transition: border-color $timing $duration;
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+  }
+  &::placeholder {
+    letter-spacing: 0.01em;
+  }
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  letter-spacing: 0.01em;
+
+  transition: transform $timing $duration, color $timing $duration;
+
+  .modal-input:focus-within > &,
+  .input-field:not(:placeholder-shown) + & {
+    transform: translate(-25px, -35px);
+    font-size: 12px;
+    line-height: 1.17px;
+    color: $accent-color;
+  }
+}
+
+.modal-button {
+  @extend %button;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.rules,
+.rules:visited {
+  color: $accent-color;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-field {
+  @include flex(center, center);
+}
+
+.agree {
+  display: inline-block;
+  margin-right: 8px;
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  .checkbox:checked + & {
+    border-color: transparent;
+    background-color: $accent-color;
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
+}

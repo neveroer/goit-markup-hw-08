@@ -1,0 +1,30 @@
+.clients-container {
+  @extend %container;
+}
+
+.clients-list {
+  @extend %markers;
+  @include flex(center, stretch);
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.company-item {
+  @include flex(center, center);
+  width: 170px;
+  height: 90px;
+  border: 1px solid $icons-color;
+  border-radius: 4px;
+  fill: $icons-color;
+
+  transition: border-color $duration $timing, fill $duration $timing;
+
+  &:hover,
+  &:focus {
+    @extend %focus;
+    border-color: $accent-color;
+    fill: $accent-color;
+  }
+}

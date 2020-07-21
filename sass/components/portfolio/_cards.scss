@@ -1,0 +1,104 @@
+.projects-list {
+  @extend %markers;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-card:not(:nth-child(3n)) {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.project-content {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.project-name {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $secondary-text-color;
+}
+
+.project-type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  color: $primary-text-color;
+}
+
+.overlay-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay,
+.project-description {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  transition: transform $timing $duration;
+  transition: opacity $timing $duration;
+}
+
+.project-description {
+  display: block;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: $third-text-color;
+
+  .project-link:hover &,
+  .project-link:focus & {
+      @extend %focus;
+    opacity: 1;
+  }
+}
+
+.project-overlay {
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform $timing $duration, opacity $timing $duration;
+
+  .project-link:hover &,
+  .project-link:focus & {
+      @extend %focus;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.project-link {
+  @extend %link;
+  transition: transform $timing $duration;
+  transition: opacity $timing $duration;
+  transition: box-shadow $timing $duration;
+
+  &:hover,
+  &:focus {
+      @extend %focus;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+}

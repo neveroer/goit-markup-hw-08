@@ -1,0 +1,8 @@
+.projects {
+  @extend %container;
+  padding-top: 94px;
+}
+
+.visually-hidden {
+  @extend %visually-hidden;
+}

@@ -1,0 +1,43 @@
+.nav-flex {
+  @include flex(space-between, center);
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.nav-list {
+  @extend %markers;
+  display: flex;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.current::after,
+.nav-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  border-radius: 2px;
+  background-color: $accent-color;
+
+  transition: transform $duration $timing, opacity $duration $timing;
+}
+
+.nav-hover::after {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-hover:hover::after,
+.nav-hover:focus::after {
+  @extend %focus;
+  opacity: 1;
+  transform: scaleX(1);
+}

@@ -1,0 +1,36 @@
+.footer-address {
+  font-style: normal;
+}
+
+.address-map {
+  color: $third-text-color;
+
+  transition: color $duration $timing;
+
+  &:hover,
+  &:focus {
+    @extend %focus;
+    color: $accent-color;
+  }
+}
+
+.footer-address-links {
+  display: inline-block;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.mail-phone {
+  color: $footer-adress-color;
+
+  transition: color $duration $timing;
+
+  &:hover,
+  &:focus {
+    @extend %focus;
+    color: $accent-color;
+  }
+}

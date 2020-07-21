@@ -1,0 +1,22 @@
+footer {
+  background-color: $footer-background-color;
+}
+
+.container-footer {
+  @extend %container;
+  padding-top: 45px;
+  padding-bottom: 60px;
+}
+
+.footer-flex {
+  @include flex(space-between, baseline);
+}
+
+.footer-call {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $third-text-color;
+}

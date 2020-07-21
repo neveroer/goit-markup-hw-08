@@ -1,0 +1,58 @@
+.email {
+  margin-right: 12px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: $footer-background-color;
+  color: $icons-color;
+  font-size: 16px;
+  line-height: 1.25;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.subscribe-flex {
+  @include flex(center, center);
+}
+.subscribe {
+  display: inline-block;
+  margin-right: 10px;
+
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  transition: fill $duration $timing;
+
+  &:hover,
+  &:focus {
+    @extend %focus;
+    fill: $accent-color;
+  }
+}
+
+.button-footer {
+  @extend %button;
+  @include flex(center, center);
+  fill: $third-text-color;
+
+  transition: fill $duration $timing, color $duration $timing,
+    border-color $duration $timing, background-color $duration $timing;
+
+  &:focus,
+  &:hover {
+    @extend %focus;
+    fill: $accent-color;
+  }
+}

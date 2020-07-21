@@ -1,0 +1,30 @@
+.address-list {
+  @include flex(flex-start, center);
+  margin-left: auto;
+  @extend %markers;
+}
+
+.address-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.icon-mail,
+.icon-phone {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.address-link {
+  color: $primary-text-color;
+  fill: $primary-text-color;
+  font-style: normal;
+
+  transition: color $duration $timing, fill $duration $timing;
+
+  &:hover,
+  &:focus {
+    @extend %focus;
+    color: $accent-color;
+    fill: $accent-color;
+  }
+}

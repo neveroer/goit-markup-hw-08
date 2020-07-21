@@ -1,0 +1,34 @@
+.team-photo {
+  margin-bottom: 30px;
+}
+
+.team-person {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  color: $secondary-text-color;
+}
+
+.team-job {
+  margin-bottom: 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.social-item {
+  @extend %links-item;
+}
+
+.social-list {
+  @extend %links-list;
+}
+
+.social-link {
+  @include social-link($icons-color);
+}
