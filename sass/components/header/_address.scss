@@ -1,7 +1,10 @@
 .address-list {
-  // @include flex(flex-start, center);
   margin-left: auto;
   @extend %markers;
+
+  @media screen and (min-width: 768px) {
+    @include flex(flex-start, center);
+  }
 }
 
 .address-item:not(:last-child) {

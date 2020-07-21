@@ -4,22 +4,27 @@
 
 .header-flex {
   @extend %container;
-  // @include flex(space-between, center);
-
   padding-bottom: 0;
   padding-top: 0;
+
+  @media screen and (min-width: 768px) {
+    @include flex(space-between, center);
+  }
 }
 
 .nav-link,
 .address-link {
   position: relative;
 
-  // @include flex(flex-start, center);
   padding-top: 32px;
   padding-bottom: 32px;
   @extend %link;
   color: $secondary-text-color;
   transition: color $duration $timing;
+
+  @media screen and (min-width: 768px) {
+    @include flex(flex-start, center);
+  }
 
   &:visited {
     color: $secondary-text-color;
