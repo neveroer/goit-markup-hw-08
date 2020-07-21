@@ -1,6 +1,9 @@
+.footer-join {
+  padding-bottom: 60px;
+}
 .footer-social {
   @extend %links-list;
-  display: flex;
+  // display: flex;
   padding-left: 0;
   padding-right: 0;
 }

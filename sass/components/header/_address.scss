@@ -1,5 +1,5 @@
 .address-list {
-  @include flex(flex-start, center);
+  // @include flex(flex-start, center);
   margin-left: auto;
   @extend %markers;
 }

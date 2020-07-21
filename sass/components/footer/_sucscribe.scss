@@ -1,5 +1,5 @@
 .email {
-  margin-right: 12px;
+  margin-bottom: 20px;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -13,6 +13,11 @@
   font-size: 16px;
   line-height: 1.25;
 
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
     font-size: 16px;
@@ -21,8 +26,11 @@
 }
 
 .subscribe-flex {
-  @include flex(center, center);
+  @media screen and (min-width: 1200px) {
+    @include flex(center, center);
+  }
 }
+
 .subscribe {
   display: inline-block;
   margin-right: 10px;
@@ -44,7 +52,6 @@
 
 .button-footer {
   @extend %button;
-  @include flex(center, center);
   fill: $third-text-color;
 
   transition: fill $duration $timing, color $duration $timing,
@@ -54,5 +61,9 @@
   &:hover {
     @extend %focus;
     fill: $accent-color;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex(center, center);
   }
 }

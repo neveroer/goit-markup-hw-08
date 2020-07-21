@@ -1,12 +1,12 @@
 .nav-flex {
-  @include flex(space-between, center);
+  // @include flex(space-between, center);
   padding-bottom: 0;
   padding-top: 0;
 }
 
 .nav-list {
   @extend %markers;
-  display: flex;
+  // display: flex;
 }
 
 .nav-item:not(:last-child) {

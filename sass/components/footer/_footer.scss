@@ -6,10 +6,16 @@ footer {
   @extend %container;
   padding-top: 45px;
   padding-bottom: 60px;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer-flex {
-  @include flex(space-between, baseline);
+  @media screen and (min-width: 1200px) {
+    @include flex(space-between, baseline);
+  }
 }
 
 .footer-call {

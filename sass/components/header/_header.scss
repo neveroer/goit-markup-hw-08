@@ -4,7 +4,7 @@
 
 .header-flex {
   @extend %container;
-  @include flex(space-between, center);
+  // @include flex(space-between, center);
 
   padding-bottom: 0;
   padding-top: 0;
@@ -14,7 +14,7 @@
 .address-link {
   position: relative;
 
-  @include flex(flex-start, center);
+  // @include flex(flex-start, center);
   padding-top: 32px;
   padding-bottom: 32px;
   @extend %link;

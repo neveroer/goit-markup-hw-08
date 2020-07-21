@@ -1,9 +1,13 @@
 .services-container {
   @extend %container;
+
+  @media screen and (max-width: 1999px) {
+    display: none;
+  }
 }
 
 .services-list {
-  display: flex;
+  // display: flex;
   @extend %markers;
 }
 

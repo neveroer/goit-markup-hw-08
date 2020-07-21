@@ -35,7 +35,7 @@ img {
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.67;
@@ -43,14 +43,39 @@ img {
   color: #212121;
 }
 
+@media screen and (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
 .header-flex, .projects, .container-footer {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .header-flex, .projects, .container-footer {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-flex, .projects, .container-footer {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-flex, .projects, .container-footer {
+    width: 1200px;
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 /* убирает маркеры списка, дает 0 марджин и паддинг */
@@ -118,8 +143,9 @@ img {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  padding-left: 32px;
-  padding-right: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer-social-item {
@@ -135,15 +161,6 @@ img {
 }
 
 .header-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -151,15 +168,6 @@ img {
 .nav-link,
 .address-link {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: #212121;
@@ -203,7 +211,13 @@ img {
 
 .logo-footer {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-footer {
+    margin-bottom: 8px;
+  }
 }
 
 .logo-studio {
@@ -211,23 +225,8 @@ img {
 }
 
 .nav-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-bottom: 0;
   padding-top: 0;
-}
-
-.nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .nav-item:not(:last-child) {
@@ -265,15 +264,6 @@ img {
 }
 
 .address-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-left: auto;
 }
 
@@ -475,16 +465,24 @@ footer {
   padding-bottom: 60px;
 }
 
-.footer-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+@media screen and (max-width: 1199px) {
+  .container-footer {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .footer-call {
@@ -497,6 +495,13 @@ footer {
 
 .footer-address {
   font-style: normal;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-address {
+    margin-bottom: 0;
+  }
 }
 
 .address-map {
@@ -528,10 +533,11 @@ footer {
   color: #2196f3;
 }
 
+.footer-join {
+  padding-bottom: 60px;
+}
+
 .footer-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-left: 0;
   padding-right: 0;
 }
@@ -561,7 +567,7 @@ footer {
 }
 
 .email {
-  margin-right: 12px;
+  margin-bottom: 20px;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -573,6 +579,13 @@ footer {
   color: #afb1b8;
   font-size: 16px;
   line-height: 1.25;
+}
+
+@media screen and (min-width: 1200px) {
+  .email {
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 
 .email::-webkit-input-placeholder {
@@ -599,16 +612,18 @@ footer {
   line-height: 1.25;
 }
 
-.subscribe-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 1200px) {
+  .subscribe-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .subscribe {
@@ -628,15 +643,6 @@ footer {
 }
 
 .button-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   fill: #ffffff;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -644,5 +650,19 @@ footer {
 
 .button-footer:focus, .button-footer:hover {
   fill: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .button-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */
