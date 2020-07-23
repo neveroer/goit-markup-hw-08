@@ -213,6 +213,12 @@ img {
   color: #2196f3;
 }
 
+@media screen and (min-width: 768px) {
+  .address-link {
+    padding: 0;
+  }
+}
+
 .logo {
   display: inline-block;
   margin-right: 85px;
@@ -316,7 +322,7 @@ img {
   margin-left: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .address-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -330,8 +336,33 @@ img {
   }
 }
 
-.address-item:not(:last-child) {
-  margin-right: 30px;
+.address-item {
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .address-item {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-item {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .address-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .icon-mail,
@@ -602,9 +633,51 @@ img {
   background-origin: border-box;
 }
 
+@media screen and (min-width: 1200px) {
+  .container-benefits {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-item:not(:nth-child(2n)) {
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .benefits-item {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
 @media screen and (max-width: 767px) {
   .benefits-item:not(:last-child) {
     padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .benefits-item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -627,9 +700,17 @@ img {
   color: #212121;
 }
 
-@media screen and (max-width: 1999px) {
+@media screen and (max-width: 1199px) {
   .services-container {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -664,6 +745,23 @@ img {
   background-color: #f5f4fa;
 }
 
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-item:not(:nth-child(2n)) {
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+}
+
 .team-item {
   padding-bottom: 24px;
   background-color: #ffffff;
@@ -672,9 +770,26 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-@media screen and (max-width: 1999px) {
+@media screen and (min-width: 768px) {
   .team-item {
-    margin-bottom: 30px;
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-item {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+.team-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team-item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -770,6 +885,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .clients-item:not(:last-child) {
+    margin-bottom: 0;
     margin-right: 30px;
   }
 }
@@ -795,21 +911,21 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.company-item:hover, .company-item:focus {
-  border-color: #2196f3;
-  fill: #2196f3;
-}
-
 @media screen and (min-width: 768px) {
-  .company-item:hover, .company-item:focus {
+  .company-item {
     width: 226px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .company-item:hover, .company-item:focus {
+  .company-item {
     width: 170px;
   }
+}
+
+.company-item:hover, .company-item:focus {
+  border-color: #2196f3;
+  fill: #2196f3;
 }
 
 footer {
@@ -926,6 +1042,9 @@ footer {
 }
 
 .email {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 20px;
   padding-left: 16px;
   padding-top: 15px;

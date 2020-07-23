@@ -215,6 +215,12 @@ img {
   color: #2196f3;
 }
 
+@media screen and (min-width: 768px) {
+  .address-link {
+    padding: 0;
+  }
+}
+
 .logo {
   display: inline-block;
   margin-right: 85px;
@@ -318,7 +324,7 @@ img {
   margin-left: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .address-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -332,8 +338,33 @@ img {
   }
 }
 
-.address-item:not(:last-child) {
-  margin-right: 30px;
+.address-item {
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .address-item {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-item {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .address-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .icon-mail,
@@ -635,6 +666,9 @@ footer {
 }
 
 .email {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 20px;
   padding-left: 16px;
   padding-top: 15px;
