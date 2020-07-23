@@ -1,13 +1,32 @@
 .projects-list {
   @extend %markers;
-  display: flex;
-  flex-wrap: wrap;
+
+  @media screen and(min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.project-card {
+  @media screen and(min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+.project-card:nth-child(2n + 2) {
+  @media screen and(min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .project-card:not(:nth-child(3n)) {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  @media screen and(min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .project-content {
@@ -69,7 +88,7 @@
 
   .project-link:hover &,
   .project-link:focus & {
-      @extend %focus;
+    @extend %focus;
     opacity: 1;
   }
 }
@@ -83,7 +102,7 @@
 
   .project-link:hover &,
   .project-link:focus & {
-      @extend %focus;
+    @extend %focus;
     transform: translateY(0);
     opacity: 1;
   }
@@ -97,7 +116,7 @@
 
   &:hover,
   &:focus {
-      @extend %focus;
+    @extend %focus;
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
       0px 1px 1px rgba(0, 0, 0, 0.12);
   }
