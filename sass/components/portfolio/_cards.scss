@@ -7,20 +7,6 @@
   }
 }
 
-.project-card {
-  @media screen and(min-width: 768px) {
-    width: calc((100% - 30px) / 2);
-  }
-}
-
-.project-card:nth-child(2n + 2) {
-  @media screen and(min-width: 768px) {
-    width: calc((100% - 30px) / 2);
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
-}
-
 .project-card:not(:nth-child(3n)) {
   @media screen and(min-width: 1200px) {
     width: calc((100% - 60px) / 3);

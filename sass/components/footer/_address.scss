@@ -1,10 +1,11 @@
-.footer-address {
+.address-flex {
   font-style: normal;
 
   margin-bottom: 60px;
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 0;
+    margin-right: 69px;
   }
 }
 
@@ -38,5 +39,11 @@
   &:focus {
     @extend %focus;
     color: $accent-color;
+  }
+}
+
+.footer-address {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 165px;
   }
 }
