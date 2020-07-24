@@ -3,6 +3,7 @@
 }
 
 .header-flex {
+  position: relative;
   @extend %container;
   padding-bottom: 0;
   padding-top: 0;
@@ -17,14 +18,18 @@
 .address-link {
   position: relative;
 
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   @extend %link;
   color: $secondary-text-color;
   transition: color $duration $timing;
 
   @media screen and (min-width: 768px) {
     @include flex(flex-start, center);
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   &:visited {

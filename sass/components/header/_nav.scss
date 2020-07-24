@@ -1,10 +1,6 @@
 .nav-flex {
   padding-bottom: 0;
   padding-top: 0;
-
-  @media screen and (min-width: 768px) {
-    @include flex(space-between, center);
-  }
 }
 
 .nav-list {
@@ -13,10 +9,22 @@
   @media screen and (min-width: 768px) {
     display: flex;
   }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+    padding-top: 60px;
+    border-top: 1px solid #ececec;
+  }
 }
 
-.nav-item:not(:last-child) {
-  margin-right: 50px;
+.nav-item {
+  display: flex;
+  justify-content: center;
+
+  &:not(:last-child) {
+    @media screen and (min-width: 768px) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .current::after,
@@ -46,4 +54,12 @@
   @extend %focus;
   opacity: 1;
   transform: scaleX(1);
+}
+
+.nav-link,
+.address-link {
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 1.17;
+  }
 }

@@ -161,6 +161,7 @@ img {
 }
 
 .header-flex {
+  position: relative;
   padding-bottom: 0;
   padding-top: 0;
   display: -webkit-box;
@@ -183,8 +184,8 @@ img {
 .nav-link,
 .address-link {
   position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: #212121;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -202,6 +203,14 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link,
+  .address-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -230,6 +239,7 @@ img {
     top: 100%;
     left: 0;
     width: 100%;
+    text-align: center;
   }
   .menu-container.is-open {
     display: block;
@@ -328,20 +338,6 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .nav-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
   .nav-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -349,8 +345,27 @@ img {
   }
 }
 
-.nav-item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (max-width: 767px) {
+  .nav-list {
+    margin-bottom: 60px;
+    padding-top: 60px;
+    border-top: 1px solid #ececec;
+  }
+}
+
+.nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .current::after,
@@ -383,6 +398,14 @@ img {
           transform: scaleX(1);
 }
 
+@media screen and (max-width: 767px) {
+  .nav-link,
+  .address-link {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+}
+
 .header-address {
   margin-left: auto;
 }
@@ -404,6 +427,12 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .address-list {
+    margin-bottom: 60px;
   }
 }
 

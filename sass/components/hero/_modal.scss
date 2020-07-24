@@ -18,12 +18,13 @@
   top: 50%;
   left: 50%;
 
-  min-height: 581px;
-  min-width: 528px;
+  max-width: calc(100% - 30px);
+  max-height: calc(100% - 30px);
   padding-top: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
   padding-left: 40px;
+  overflow-y: scroll;
 
   background-color: $primary-background-color;
   border-radius: 4px;
