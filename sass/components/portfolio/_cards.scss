@@ -9,6 +9,8 @@
 
 .project-card {
   margin-bottom: 30px;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
   @media screen and(min-width: 768px) and(max-width: 1199px) {
     width: calc(50% - 30px);
   }
@@ -46,6 +48,9 @@
   line-height: 2;
   letter-spacing: 0.06em;
   color: $secondary-text-color;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project-type {
