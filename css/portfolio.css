@@ -476,6 +476,19 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-card {
+    width: calc(50% - 30px);
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-card:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .project-card:not(:nth-child(3n)) {
     width: calc((100% - 60px) / 3);

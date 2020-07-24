@@ -18,6 +18,19 @@
   }
 }
 
+.clients-item {
+  @media screen and (max-width: 767px) {
+    width: calc(50% - 30px);
+  }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+}
+
 .clients-item:nth-last-child(n + 3) {
   @media screen and (max-width: 767px) {
     margin-bottom: 30px;
@@ -45,7 +58,6 @@
 .company-item {
   @include flex(center, center);
   flex-wrap: wrap;
-  width: 210px;
   height: 90px;
   border: 1px solid $icons-color;
   border-radius: 4px;
@@ -58,13 +70,5 @@
     @extend %focus;
     border-color: $accent-color;
     fill: $accent-color;
-
-    @media screen and (min-width: 768px) {
-      width: 226px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: 170px;
-    }
   }
 }
