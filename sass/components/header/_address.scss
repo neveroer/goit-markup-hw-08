@@ -1,7 +1,13 @@
-.address-list {
+.header-address {
   margin-left: auto;
-  @extend %markers;
 
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 21px;
+  }
+}
+
+.address-list {
+  @extend %markers;
   @media screen and (min-width: 1200px) {
     @include flex(flex-start, center);
   }

@@ -6,9 +6,10 @@
   @extend %container;
   padding-bottom: 0;
   padding-top: 0;
+  @include flex(start, center);
 
-  @media screen and (min-width: 768px) {
-    @include flex(space-between, center);
+  @media screen and (max-width: 767px) {
+    height: 60px;
   }
 }
 
@@ -38,7 +39,7 @@
 }
 
 .address-link {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding: 0;
   }
 }
