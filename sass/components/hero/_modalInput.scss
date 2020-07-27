@@ -109,6 +109,10 @@
   border: 2px solid #212121;
   border-radius: 2px;
 
+  @media screen and (max-width: 479px) {
+    margin-right: 0;
+  }
+
   .checkbox:checked + & {
     border-color: transparent;
     background-color: $accent-color;
@@ -122,5 +126,9 @@
   @media screen and(max-width: 767px) {
     font-size: 12px;
     line-height: 0.86;
+  }
+  @media screen and(max-width: 479px) {
+    font-size: 12px;
+    line-height: 1.86;
   }
 }
