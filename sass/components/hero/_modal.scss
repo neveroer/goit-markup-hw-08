@@ -79,6 +79,10 @@
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  @media screen and (max-width: 767px) {
+    bottom: 88%;
+    left: 98%;
+  }
 
   transition: fill $timing $duration;
   &:hover,

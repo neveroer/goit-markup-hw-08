@@ -94,6 +94,10 @@
   line-height: 1.56;
   color: $third-text-color;
 
+  @media screen and (max-width: 479px) {
+    padding-top: 15px;
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding-top: 49px;
   }
