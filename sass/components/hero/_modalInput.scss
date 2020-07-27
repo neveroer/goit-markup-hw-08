@@ -97,7 +97,9 @@
 }
 
 .checkbox-field {
-  @include flex(center, center);
+  @media screen and (min-width: 468px) {
+    @include flex(center, center);
+  }
 }
 
 .agree {
@@ -108,10 +110,6 @@
 
   border: 2px solid #212121;
   border-radius: 2px;
-
-  @media screen and (max-width: 479px) {
-    margin-right: 0;
-  }
 
   .checkbox:checked + & {
     border-color: transparent;
