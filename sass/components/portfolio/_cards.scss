@@ -38,6 +38,12 @@
   border-left: 1px solid #eeeeee;
 }
 
+.card-image {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+}
+
 .project-name {
   margin-bottom: 4px;
 
@@ -78,7 +84,7 @@
 
 .project-description {
   display: block;
-  padding-top: 63px;
+  padding-top: 77px;
   padding-right: 24px;
   padding-bottom: 63px;
   padding-left: 24px;
@@ -87,6 +93,14 @@
   font-size: 18px;
   line-height: 1.56;
   color: $third-text-color;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 49px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 63px;
+  }
 
   .project-link:hover &,
   .project-link:focus & {

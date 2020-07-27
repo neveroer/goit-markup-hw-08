@@ -597,6 +597,15 @@ img {
   transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-transform cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
+@media screen and (max-width: 480px) {
+  .modal {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
@@ -661,6 +670,13 @@ img {
   position: relative;
   display: block;
   margin-bottom: 30px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+  .modal-input {
+    white-space: normal;
+  }
 }
 
 .input-field {
@@ -792,6 +808,13 @@ img {
   background-image: url(../images/check.svg);
   background-size: contain;
   background-origin: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .agree-text {
+    font-size: 12px;
+    line-height: 0.86;
+  }
 }
 
 @media screen and (min-width: 1200px) {

@@ -608,6 +608,12 @@ img {
   border-left: 1px solid #eeeeee;
 }
 
+@media screen and (max-width: 767px) {
+  .card-image {
+    width: 100%;
+  }
+}
+
 .project-name {
   margin-bottom: 4px;
   font-weight: 700;
@@ -650,7 +656,7 @@ img {
 
 .project-description {
   display: block;
-  padding-top: 63px;
+  padding-top: 77px;
   padding-right: 24px;
   padding-bottom: 63px;
   padding-left: 24px;
@@ -658,6 +664,18 @@ img {
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-description {
+    padding-top: 49px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-description {
+    padding-top: 63px;
+  }
 }
 
 .project-link:hover .project-description,

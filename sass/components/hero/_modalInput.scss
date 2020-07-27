@@ -3,6 +3,11 @@
 
   display: block;
   margin-bottom: 30px;
+  white-space: nowrap;
+
+  @media screen and (max-width: 480px) {
+    white-space: normal;
+  }
 }
 
 .input-field {
@@ -110,5 +115,12 @@
     background-image: url(../images/check.svg);
     background-size: contain;
     background-origin: border-box;
+  }
+}
+
+.agree-text {
+  @media screen and(max-width: 767px) {
+    font-size: 12px;
+    line-height: 0.86;
   }
 }
