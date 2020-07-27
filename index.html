@@ -226,6 +226,11 @@
           <ul class="services-list">
             <li class="services-item">
               <img
+                srcset="
+                  ./images/desktop.jpg    1x,
+                  ./images/desktop@x2.jpg 2x,
+                  ./images/desktop@x3.jpg 3x
+                "
                 src="./images/desktop.jpg"
                 alt="Экран ноутбука"
                 width="370"
@@ -235,6 +240,11 @@
             </li>
             <li class="services-item">
               <img
+                srcset="
+                  ./images/mobile.jpg    1x,
+                  ./images/mobile@x2.jpg 2x,
+                  ./images/mobile@x3.jpg 3x
+                "
                 src="./images/mobile.jpg"
                 alt="Мобильный телефон"
                 width="370"
@@ -244,7 +254,12 @@
             </li>
             <li class="services-item">
               <img
-                src="./images/design.jpg"
+                srcset="
+                  ./images/no-borders.jpg    1x,
+                  ./images/no-borders@x2.jpg 2x,
+                  ./images/no-borders@x3.jpg 3x
+                "
+                src="./images/no-borders.jpg"
                 alt="Компьютер с картинкой"
                 width="370"
                 height="294"
@@ -260,13 +275,40 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-item">
-              <img
-                class="team-photo"
-                src="./images/john-smith.jpg"
-                alt="John Smith"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/nikolai-mobile.jpg     450w,
+                    ./images/nikolai-mobile@2x.jpg  900w,
+                    ./images/nikolai-mobile@3x.jpg 1350w
+                  "
+                  sizes="100wv"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/nikolai-tablet.jpg     354w,
+                    ./images/nikolai-tablet@x2.jpg  708w,
+                    ./images/nikolai-tablet@x3.jpg 1062w
+                  "
+                  sizes="(min-width: 768px) 40vw"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/nikolai-desk.jpg    270w,
+                    ./images/nikolai-desk@x2.jpg 540w,
+                    ./images/nikolai-desk@x3.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 20vw"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team-photo"
+                  src="./images/nikolai-mobile.jpg"
+                  alt="Николай Кучеренко"
+                />
+              </picture>
               <h3 class="team-person">Николай Кучеренко</h3>
               <p class="team-job" lang="en">Product Designer</p>
               <ul class="social-list">
@@ -303,13 +345,40 @@
               </ul>
             </li>
             <li class="team-item">
-              <img
-                class="team-photo"
-                src="./images/marta-stewart.jpg"
-                alt="Marta Stewart"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/olga-mobile.jpg     450w,
+                    ./images/olga-mobile@2x.jpg  900w,
+                    ./images/olga-mobile@3x.jpg 1350w
+                  "
+                  sizes="100wv"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga-tablet.jpg     354w,
+                    ./images/olga-tablet@x2.jpg  708w,
+                    ./images/olga-tablet@x3.jpg 1062w
+                  "
+                  sizes="(min-width: 768px) 40vw"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga-desk.jpg    270w,
+                    ./images/olga-desk@x2.jpg 540w,
+                    ./images/olga-desk@x3.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 20vw"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team-photo"
+                  src="./images/olga-mobile.jpg"
+                  alt="Ольга Иванова"
+                />
+              </picture>
               <h3 class="team-person">Ольга Иванова</h3>
               <p class="team-job" lang="en">Frontend Developer</p>
               <ul class="social-list">
@@ -346,13 +415,40 @@
               </ul>
             </li>
             <li class="team-item">
-              <img
-                class="team-photo"
-                src="./images/robert-jakis.jpg"
-                alt="Robert Jakis"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/andrew-mobile.jpg     450w,
+                    ./images/andrew-mobile@x2.jpg  900w,
+                    ./images/andrew-mobile@x3.jpg 1350w
+                  "
+                  sizes="100wv"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/andrew-tablet.jpg     354w,
+                    ./images/andrew-tablet@x2.jpg  708w,
+                    ./images/andrew-tablet@x3.jpg 1062w
+                  "
+                  sizes="(min-width: 768px) 40vw"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/andrew-desk.jpg    270w,
+                    ./images/andrew-desk@x2.jpg 548w,
+                    ./images/andrew-desk@x3.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 20vw"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team-photo"
+                  src="./images/andrew-mobile.jpg"
+                  alt="Андрей Шевченко"
+                />
+              </picture>
               <h3 class="team-person">Андрей Шевченко</h3>
               <p class="team-job" lang="en">Marketing</p>
               <ul class="social-list">
@@ -389,13 +485,40 @@
               </ul>
             </li>
             <li class="team-item">
-              <img
-                class="team-photo"
-                src="./images/martin-doe.jpg"
-                alt="Martin Doe"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ivan-mobile.jpg     450w,
+                    ./images/ivan-mobile@x2.jpg  900w,
+                    ./images/ivan-mobile@x3.jpg 1350w
+                  "
+                  sizes="100wv"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/ivan-tablet.jpg     354w,
+                    ./images/ivan-tablet@x2.jpg  708w,
+                    ./images/ivan-tablet@x3.jpg 1062w
+                  "
+                  sizes="(min-width: 768px) 40vw"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/ivan-desk.jpg    270w,
+                    ./images/ivan-desk@x2.jpg 540w,
+                    ./images/ivan-desk@x3.jpg 810w
+                  "
+                  sizes="(min-width: 1200px) 20vw"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team-photo"
+                  src="./images/ivan-mobile.jpg"
+                  alt="Иван Николаев"
+                />
+              </picture>
               <h3 class="team-person">Иван Николаев</h3>
               <p class="team-job" lang="en">UI Designer</p>
               <ul class="social-list">

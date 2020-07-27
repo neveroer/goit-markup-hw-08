@@ -906,6 +906,10 @@ img {
   background-color: #f5f4fa;
 }
 
+.team-photo {
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .team-list {
     display: -webkit-box;
